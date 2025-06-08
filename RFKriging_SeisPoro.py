@@ -70,7 +70,7 @@ y_train_coord, y_test_coord = train_test_split(y_coord_sh, test_size=0.25, rando
 z_train_coord, z_test_coord = train_test_split(z_coord_sh, test_size=0.25, random_state=42)
 
 
-# Step 4: Fit a Gaussian Process on the predictions from Random Forest
+# Fit a Gaussian Process on the predictions from Random Forest
 class GaussianProcessModel(gpytorch.models.ExactGP):
     def __init__(self, train_x, train_y, likelihood):
         super(GaussianProcessModel, self).__init__(train_x, train_y, likelihood)
